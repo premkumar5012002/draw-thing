@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	webpack: {
+		plugins: [new MiniCssExtractPlugin()],
+	},
+};
+
+module.exports = nextConfig;
